@@ -39,6 +39,13 @@
 	const newGameLose = document.getElementById("newGameLose");
 	const newGameWin = document.getElementById("newGameWin");
 	
+	const hangman = document.getElementById("hangman");
+	const body = document.getElementsByClassName("body");
+	const leg = document.getElementsByClassName("leg");
+	const arms = document.getElementsByClassName("arms");
+	const head = document.getElementsByClassName("head");
+	const face = document.querySelectorAll(".face line");
+	
 	// initialize guess counter and state
 	let missed = 0;
 	resetGame();
@@ -111,6 +118,30 @@
 			if (!checkedLetter) {
 				tries[missed].style.background = "red";
 				tries[missed].style.color = "black";
+				
+				if (missed === 0) {
+					hangman.style.opacity = "1";
+				}
+				
+				if (missed === 1) {
+					body[0].style.animation = "body 3s ease-out 0.3s forwards";
+				}
+				
+				if (missed === 2) {
+					leg[0].style.animation = "leg 3s ease-out 0.3s forwards";
+				}
+				
+				if (missed === 3) {
+					arms[0].style.animation = "arms 3s ease-out 0.3s forwards";
+				}
+				
+				if (missed === 4) {
+					head[0].style.animation = "head 3s ease-out 0.3s forwards";
+					[].forEach.call(face, (vally) => {
+						vally.style.animation = "face 3s ease-out 0.3s forwards";
+					});
+				}
+				
 				missed++;
 			}
 			
@@ -123,9 +154,11 @@
 	function checkWin() {
 		if (letterClass.length === showClass.length) {
 			success.style.display = "block";
+			success.style.opacity = "1";
 		}
 		if (missed === tries.length) {
 			failure.style.display = "block";
+			failure.style.opacity = "1";
 		}
 	}
 	
@@ -156,6 +189,7 @@
 		// hide game over screen
 		[].forEach.call(gameOver, (vally) => {
 			vally.style.display = "none";
+			failure.style.opacity = "0";
 		});
 	}
 })();

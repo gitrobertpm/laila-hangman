@@ -31,7 +31,7 @@ html {
 h1, #keyboard, #scoreboard, #phrase {
  	display: block;
 	width: 100%;
-	max-width: 1024px;
+	max-width: 824px;
 	padding: 15px;
 	margin: 25px auto auto;
 	background: rgba(0,0,0,0.8);
@@ -84,6 +84,7 @@ h2 {
 }
 
 .letter {
+	display: inline-block;
 	color: transparent;
 	font-size: x-large;
 	width: 35px;
@@ -117,19 +118,21 @@ h2 {
  /* game over screens */
 .game-over {
 	display: none;
+	opacity: 0;
 	position: fixed;
 	left: 50%;
 	font-size: 5rem;
 	color: white;
-	width: 90%;
+	width: 50%;
 	height: 90%;
 	margin: 0 auto;
-	margin-left: -45%;
+	margin-left: -25%;
 	padding: 50px;
 	background: rgba(50,50,50,0.9);
 	border-radius: 5px;
 	border: 2px solid rgba(100,235,100,0.8);
 	box-shadow: 7px 7px 7px rgba(50,50,50,0.5);
+	transition: opacity 1s ease-out 3s;
  }
 
 .game-over h3 {
