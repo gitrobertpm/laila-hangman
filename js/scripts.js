@@ -191,6 +191,21 @@
 			vally.style.display = "none";
 			failure.style.opacity = "0";
 		});
+	
+		hangman.style.opacity = "0";
+
+		body[0].style.animation = "none";
+
+		leg[0].style.animation = "none";
+
+		arms[0].style.animation = "none";
+
+		head[0].style.animation = "none";
+
+		[].forEach.call(face, (vally) => {
+			vally.style.animation = "none";
+		});
+
 	}
 })();
 

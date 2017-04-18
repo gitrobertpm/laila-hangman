@@ -4,8 +4,8 @@
 	width: 25%;
 	max-width: 420px;
 	min-height: 630px;
-	height: auto;
-	margin: 45px auto auto;
+	height: 100%;
+	margin: auto;
 	background: rgba(245,245,245,0.9);
 	border-radius: 5px;
 	opacity: 0;

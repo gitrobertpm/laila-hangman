@@ -32,7 +32,7 @@ h1, #keyboard, #scoreboard, #phrase {
  	display: block;
 	width: 100%;
 	max-width: 824px;
-	padding: 15px;
+	padding: 10px;
 	margin: 25px auto auto;
 	background: rgba(0,0,0,0.8);
 	border-radius: 5px;
@@ -49,13 +49,16 @@ h1 {
  /* keyboard */
 .keyrow {
 	display: block;
+	margin: auto;
+	min-width: 775px;
+	max-width: 775px;
 }
 
 .keyrow button {
 	color: white;
 	font-size: large;
-	width: 60px;
-	padding: 10px;
+	width: 50px;
+	padding: 7px;
 	margin: 5px;
 	background: rgba(0,0,0,0.8);
 	border-radius: 5px;
@@ -121,7 +124,7 @@ h2 {
 	opacity: 0;
 	position: fixed;
 	left: 50%;
-	font-size: 5rem;
+	font-size: 2rem;
 	color: white;
 	width: 50%;
 	height: 90%;
