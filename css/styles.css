@@ -1,0 +1,156 @@
+html {
+   box-sizing: border-box;
+ }
+
+ *, *:before, *:after {
+   box-sizing: inherit;
+   display: inline-block;
+   text-align: center;
+ }
+
+ head {
+  display: none;
+ }
+
+ body {
+	position: relative;
+	display: block;
+	font-family: 'Righteous', cursive;
+	margin: 0;
+	background: rgba(245,245,245,0.9);
+ }
+
+ p {
+   width: 15px;
+ }
+
+ ol {
+   padding: 0;
+ }
+
+h1, #keyboard, #scoreboard, #phrase {
+ 	display: block;
+	width: 100%;
+	max-width: 1024px;
+	padding: 15px;
+	margin: 25px auto auto;
+	background: rgba(0,0,0,0.8);
+	border-radius: 5px;
+	border: 2px solid rgba(150,150,150,0.8);
+	box-shadow: 3px 3px 3px rgba(50,50,50,0.5);
+}
+
+h1 {
+	color: rgba(100,235,100,0.8);
+	margin: 45px auto auto;
+}
+
+
+ /* keyboard */
+.keyrow {
+	display: block;
+}
+
+.keyrow button {
+	color: white;
+	font-size: large;
+	width: 60px;
+	padding: 10px;
+	margin: 5px;
+	background: rgba(0,0,0,0.8);
+	border-radius: 5px;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+.keyrow .chosen {
+	background: #585858;
+	border-color: #464646;
+}
+
+.keyrow button:hover {
+	background: rgba(100,235,100,0.5);
+}
+
+.keyrow .chosen:hover {
+	background: #585858;
+}
+
+ /* Scoreboard */
+h2 {
+	display: block;
+	color: rgba(100,235,100,0.8);
+	margin: 5px auto auto;
+}
+
+.letter {
+	color: transparent;
+	font-size: x-large;
+	width: 35px;
+	height: 35px;
+	padding: 0 1px 0 1px;
+	margin-right: 2px;
+	background: white;
+	border-radius: 5px;
+	border: 2px solid rgba(150,150,150,0.8);
+	transition: all 0.3s;
+}
+
+.show {
+	color: #000;
+}
+
+.tries {
+	display: inline-block;
+	font-weight: bold;
+	color: transparent;
+	width: 30px;
+	height: 30px;
+	margin-right: 5px;
+	padding: 5px;
+	background: white;
+	border-radius: 5px;
+	border: 2px solid rgba(150,150,150,0.8);
+	transition: all 0.3s
+}
+
+ /* game over screens */
+.game-over {
+	display: none;
+	position: fixed;
+	left: 50%;
+	font-size: 5rem;
+	color: white;
+	width: 90%;
+	height: 90%;
+	margin: 0 auto;
+	margin-left: -45%;
+	padding: 50px;
+	background: rgba(50,50,50,0.9);
+	border-radius: 5px;
+	border: 2px solid rgba(100,235,100,0.8);
+	box-shadow: 7px 7px 7px rgba(50,50,50,0.5);
+ }
+
+.game-over h3 {
+	display: block;
+}
+
+.newGame {
+	display: block;
+	color: black;
+	min-width: 300px;
+	height: 50px;
+	margin: auto;
+	background: white;
+	border-radius: 5px;
+	border: 2px solid rgba(100,235,100,0.8);
+	box-shadow: 7px 7px 7px rgba(50,50,50,0.5);
+	transition: all 0.3s;
+}
+
+.newGame:hover {
+	color: white;
+	background: rgba(100,235,100,0.8);
+	border-color: white;
+}
